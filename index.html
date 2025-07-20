@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <p>ENTER TEXT AND URL</p>
+        <input type="text" placeholder="Enter text and url" id="orinput">
+        <div id="imgbox">
+            <img id="orimg" src="" alt="">
+        </div>
+        <button id="orbtn" onclick="generateor();">GENERATE OR CODE</button>
+    </div>
+
+    <script>
+        let orbtn = document.getElementById("orbtn");
+        let orimg = document.getElementById("orimg");
+        let orinput = document.getElementById("orinput");
+        
+
+        function generateor(){
+          orimg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + orinput.value;
+        }
+    </script>
+</body>
+</html>
