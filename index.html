@@ -23,8 +23,18 @@
         
 
         function generateor(){
+            if(orinput.value.length > 0){
           orimg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + orinput.value;
-        }
+        
+        imgbox.classList.add("active");
+    }else{
+        orinput.classList.add("error");
+        setTimeout(()=>{
+            orinpur.classList.remove("error");
+        },1000);
+    }
+
+}
     </script>
 </body>
 </html>
